@@ -1,0 +1,51 @@
+
+$light-color:#EAEAEA;
+$font-family:'Roboto',sans-serif;
+
+body{
+    font-family:sans-serif;
+    background-color:#F6F6F6;
+}
+
+
+/*******header********/
+.main-container{
+    display: flex;
+    background-color: #ffff;
+    justify-content: center;
+    width: 375px;
+    height: 53px;
+ 
+    .logo{
+        width: 197px;
+        height: 36px;
+    }
+}
+
+.card{
+    background-color:#ffff;
+    border-radius: 20px;
+}
+
+.intro-container{
+    text-align: center;
+    padding-top: 30px;
+}
+
+/*****instructions and restaurants*****/
+.instructions-section{
+   width: 375px;
+   height: 440px;
+   background-color:#ffff;
+}
+
+.restaurant-section{
+    background-color: #F6F6F6;
+    border-radius: 15px;
+
+    &__restaurant__cards.card{
+        width: 340%;
+        height: 251%;
+    }
+
+}
