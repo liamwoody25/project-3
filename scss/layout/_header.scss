@@ -1,7 +1,13 @@
 $font-stack:"roboto",sans-serif;
+$light-color: #ffff;
 $light-color:#EAEAEA;
 
 .main-container{
     display: flex;
-    flex-wrap: wrap;
+    background-color:$light-color;
+    justify-content: center;
+    width: 375px;
+    height: 53px;
+
+    
 }
