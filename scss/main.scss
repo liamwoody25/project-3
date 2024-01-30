@@ -15,35 +15,47 @@ body{
     justify-content: center;
     width: 375px;
     height: 53px;
- 
+
     .logo{
         width: 197px;
         height: 36px;
+        padding-top: 10px;
     }
 }
 
 .card{
     background-color:#ffff;
     border-radius: 20px;
+    width: 322px;
+    height: 72;
 }
-
+/****sub header******/
 .intro-container{
     text-align: center;
     padding-top: 30px;
+    
+    .sub-heading{
+        font-size: 20px;
+        font-style: normal;
+        font-family: $font-family;
+        font-weight: 300;
+    }
+ 
+    .restaurants{
+        border-radius: 25px;
+        width: 228px;
+        height: 50px;
+        border: 0;
+    }
 }
 
-/*****instructions and restaurants*****/
-.instructions-section{
-   width: 375px;
-   height: 440px;
-   background-color:#ffff;
-}
-
-.restaurant-section{
+/*****restaurants*****/
+.botton-card
+.places-section{
     background-color: #F6F6F6;
-    border-radius: 15px;
+    border-radius: 20px;
 
-    &__restaurant__cards.card{
+    .restaurant__cards.card{
         width: 340%;
         height: 251%;
     }

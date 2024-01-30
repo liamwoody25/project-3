@@ -14,30 +14,40 @@ body {
 .main-container .logo {
   width: 197px;
   height: 36px;
+  padding-top: 10px;
 }
 
 .card {
   background-color: white;
   border-radius: 20px;
+  width: 322px;
+  height: 72;
 }
 
+/****sub header******/
 .intro-container {
   text-align: center;
   padding-top: 30px;
 }
-
-/*****instructions and restaurants*****/
-.instructions-section {
-  width: 375px;
-  height: 440px;
-  background-color: white;
+.intro-container .sub-heading {
+  font-size: 20px;
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.intro-container .restaurants {
+  border-radius: 25px;
+  width: 228px;
+  height: 50px;
+  border: 0;
 }
 
-.restaurant-section {
+/*****restaurants*****/
+.botton-card .places-section {
   background-color: #F6F6F6;
-  border-radius: 15px;
+  border-radius: 20px;
 }
-.restaurant-section__restaurant__cards.card {
+.botton-card .places-section .restaurant__cards.card {
   width: 340%;
   height: 251%;
 }/*# sourceMappingURL=main.css.map */
