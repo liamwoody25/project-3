@@ -15,7 +15,6 @@ body {
   width: 197px;
   height: 36px;
   padding-top: 10px;
-  justify-content: space-between;
 }
 
 .location-header {
@@ -23,12 +22,12 @@ body {
   width: 375px;
   height: 50px;
   display: flex;
-  padding-left: 30%;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
 }
 
+/*********header*********/
 .card {
   background-color: white;
   border-radius: 20px;
@@ -36,7 +35,13 @@ body {
   height: 251px;
 }
 
-/****sub section******/
+.long-card {
+  background-color: #F6F6F6;
+  width: 322px;
+  height: 72.379px;
+}
+
+/****intro section******/
 .intro-container {
   text-align: center;
   padding-top: 30px;
@@ -58,8 +63,36 @@ body {
   font-style: normal;
   font-weight: 500;
 }
-.intro-container .restaurants .instructions-section {
+
+/********intructions*******/
+.instructions-container {
   background-color: white;
+  width: 375px;
+  height: 440px;
+}
+
+.choose {
+  width: 322.486px;
+  height: 72.379px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #F6F6F6;
+}
+
+.build {
+  width: 322.486px;
+  height: 72.379px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #F6F6F6;
+}
+
+.enjoy {
+  width: 322.486px;
+  height: 72.379px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #F6F6F6;
 }
 
 /*****restaurants*****/
@@ -68,7 +101,7 @@ body {
   border-radius: 20px;
 }
 .restaurant-cards .places-cards {
-  padding-left: 17px;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -85,24 +118,21 @@ body {
      object-fit: cover;
 }
 .restaurant-cards .places-cards .card img content {
-  line-height: 5px;
-  padding-left: 10px;
-}
-.restaurant-cards .places-cards .card img content heart-icon {
-  width: 22px;
-  height: 21px;
+  padding-left: 5px;
 }
 
 /*******footer******/
 .footer-container {
   display: flex;
   background-color: #353535;
-  width: 375px;
-  justify-content: stretch;
+  width: 395px;
+  justify-content: flex-start;
+  padding-right: 0;
 }
-.footer-container .logo {
-  display: flex;
-  align-items: center;
+.footer-container.logo {
   width: 139px;
   height: 27px;
+}
+.footer-container.logo .links {
+  font-size: 16px;
 }/*# sourceMappingURL=main.css.map */
