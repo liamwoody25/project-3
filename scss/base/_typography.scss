@@ -1,0 +1,34 @@
+body {
+    font-family: 'Roboto', sans-serif;
+        font-size: clamp(0.5rem, 0.5rem + 2vw, 1em);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.intro__heading, .steps__heading, #container__heading {
+    font-size: 1.5rem;
+}
+
+.intro__byline, .resto-card__byline, .resto-card__heading {
+    font-size: 1.1rem;
+}
+
+.intro__nav, .steps__links, .footer__nav, .btn {
+    font-size: 1rem;
+}
+
+.resto-card__media-content {
+    font-size: 0.9rem;
+}
+
+.steps span {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.resto-card__byline {
+    line-height: 1.5;
+}

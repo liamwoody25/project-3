@@ -6,9 +6,10 @@ body {
 /*******header********/
 .main-container {
   display: flex;
+  flex-wrap: wrap;
   background-color: white;
-  width: 395px;
-  padding: 0;
+  width: 375px;
+  padding: 14px 89px 13px 89px;
   height: 63px;
 }
 .main-container .logo {
@@ -66,9 +67,11 @@ body {
 
 /********intructions*******/
 .instructions-container {
+  display: flex;
   background-color: white;
-  width: 375px;
-  height: 440px;
+  width: 395px;
+  height: 450px;
+  margin-left: 5px;
 }
 
 .choose {
@@ -104,7 +107,7 @@ body {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 .restaurant-cards .places-cards .card {
   width: 340px;
@@ -118,7 +121,7 @@ body {
      object-fit: cover;
 }
 .restaurant-cards .places-cards .card img content {
-  padding-left: 5px;
+  padding-left: 50px;
 }
 
 /*******footer******/
@@ -126,13 +129,17 @@ body {
   display: flex;
   background-color: #353535;
   width: 395px;
+  height: 150px;
   justify-content: flex-start;
-  padding-right: 0;
 }
 .footer-container.logo {
   width: 139px;
   height: 27px;
+  justify-content: center;
+  align-items: center;
 }
 .footer-container.logo .links {
   font-size: 16px;
+  color: white;
+  text-align: left;
 }/*# sourceMappingURL=main.css.map */

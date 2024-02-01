@@ -1,7 +1,8 @@
 
 $light-color:#EAEAEA;
-$light-color: #ffff;
+$white-color: #ffff;
 $font-family:'Roboto',sans-serif;
+
 
 body{
     font-family:$font-family;
@@ -12,10 +13,11 @@ body{
 /*******header********/
 .main-container{
     display: flex;
+    flex-wrap: wrap;
     background-color: #ffff;
-    width: 395px;
-    padding: 0;
-    height: 63px;
+    width: 375px;
+    padding:14px 89px 13px 89px;
+    height:63px;
 
 
     .logo{
@@ -73,25 +75,32 @@ body{
 }
 /********intructions*******/    
         .instructions-container{
+            display: flex;
             background-color:#ffff;
-            width: 375px;
-            height: 440px;
+            width: 395px;
+            height: 450px;
+            margin-left: 5px;
         }
+       
         .choose{
+            
             width: 322.486px;
             height: 72.379px;
             border-radius: 20px;
             border:0;
             background-color: #F6F6F6;
         }
+            
+        
         .build{
             width: 322.486px;
             height:72.379px ;
             border-radius: 20px;
             border: 0;
             background-color: #F6F6F6;
-            
         }
+            
+        
         .enjoy{
             width: 322.486px;
             height: 72.379px;
@@ -99,6 +108,9 @@ body{
             border: 0;
             background-color: #F6F6F6;
         }
+       
+    
+
 /*****restaurants*****/
 .restaurant-cards{
     background-color: #F6F6F6;
@@ -108,7 +120,7 @@ body{
         padding-left: 20px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         
         & .card{
             width:340px;
@@ -121,7 +133,10 @@ body{
                 object-fit: cover;
 
                 content {
-                    padding-left: 5px;
+                    padding-left: 50px;
+
+
+                   
                 }
             }
         }
@@ -132,16 +147,23 @@ body{
     display: flex;
     background-color: #353535;
     width: 395px;
+    height:150px;
     justify-content: flex-start;
-    padding-right: 0;
 
 
     &.logo{
         width: 139px;
         height: 27px;
+        justify-content: center;
+        align-items: center;
+
 
         .links{
             font-size: 16px;
+            color: $white-color;
+            text-align: left
+
+
         }
     }
 }

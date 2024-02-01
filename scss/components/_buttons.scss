@@ -5,3 +5,13 @@ $font-family:arial,Roboto,sans-serif;
     width: 218px;
     height: 50px;
 }
+
+
+
+
+.btn {
+    @include btn;
+    .btn {
+        @include btn;
+    }
+}
