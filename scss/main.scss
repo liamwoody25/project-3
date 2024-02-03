@@ -17,25 +17,29 @@ body{
     background-color: #ffff;
     width: 375px;
     padding:14px 89px 13px 89px;
-    height:63px;
+    height:55px;
 
 
     .logo{
     width: 197px;
     height: 36px;
     padding-top: 10px;
+
+
+    
     }
 }
 
 .location-header{
     background-color:#EAEAEA;
     width: 375px;
-    height: 50px;
-    display: flex;
+    height: 56px;
+    display: flex;  
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-}
+    }
+
 /*********header*********/
 .card{
     background-color:#ffff;

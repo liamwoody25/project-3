@@ -1,0 +1,40 @@
+.ResHeartMove {
+    border: none;
+    background-color: inherit;
+    position: relative;
+   font-size: 1.5rem;
+    height: fit-content;
+
+/******* what i did here was that i added a bottom ampersand nesting for the heart underneath the top one to transition *******/
+    &__bottom {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    &:focus, &:hover, &:active {
+        & .ResHeartMove__bottom {
+            opacity: 0;
+        }
+        & .ResHeartMove__top {
+            opacity: 1;
+        } 
+    }
+/******* i added the heart ontop of the bottom one for it to transition to a different colour when you hover over the heart icon******/
+    &__top {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 2s;
+    }
+    .far {
+        display: block;
+    }
+    .fas {
+        display: block;
+        background: -webkit-linear-gradient(#9356dc, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
