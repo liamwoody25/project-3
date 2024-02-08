@@ -1,0 +1,58 @@
+@mixin media-query($media-size) {
+    @media screen and (min-width: map-get($breakpoints, $media-size)){
+        @content;
+    }
+}
+@mixin interaction-query($pointing-quality) {
+    @media (pointer: $pointing-quality) {
+        @content;
+    }
+}
+
+@mixin shadow-drop ($color: $color-bckgrd) {
+    filter: drop-shadow(0 5px 3px darken($color,10%));
+    &:hover, &--active {
+        filter: drop-shadow(0 5px 3px darken($color,20%));
+    }
+}
+
+@mixin shadow-box ($color: $color-bckgrd) {
+    box-shadow: 0 8px 20px -4px darken($color,15%);
+ &:hover {
+     box-shadow: 0 8px 20px -4px darken($color,25%);
+ }
+}
+
+@mixin btn {
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    border-radius: 50px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    padding: 16px 24px;
+    color: $color-white;
+    @include shadow-drop;
+    background-image: linear-gradient(170deg, $color-2, $color-1);
+    position: relative;
+
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        border-radius: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-image: linear-gradient(170deg, lighten($color-2, 10%), lighten($color-1, 10%));
+        opacity: 0;        
+        transition: opacity 0.5s ease-out;
+    }
+}
