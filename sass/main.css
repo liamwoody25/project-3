@@ -1,145 +1,457 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #F6F6F6;
+  font-size: clamp(0.5rem, 0.5rem + 2vw, 1em);
 }
 
-/*******header********/
-.main-container {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: white;
-  width: 375px;
-  padding: 14px 89px 13px 89px;
-  height: 63px;
-}
-.main-container .logo {
-  width: 197px;
-  height: 36px;
-  padding-top: 10px;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.location-header {
-  background-color: #EAEAEA;
-  width: 375px;
-  height: 50px;
-  display: flex;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
+.intro__heading, .steps__heading, #container__heading {
+  font-size: 1.5rem;
 }
 
-/*********header*********/
-.card {
-  background-color: white;
-  border-radius: 20px;
-  width: 340px;
-  height: 251px;
+.intro__byline, .resto-card__byline, .resto-card__heading {
+  font-size: 1.1rem;
 }
 
-.long-card {
-  background-color: #F6F6F6;
-  width: 322px;
-  height: 72.379px;
+.intro__nav, .steps__links, .footer__nav, .btn {
+  font-size: 1rem;
 }
 
-/****intro section******/
-.intro-container {
-  text-align: center;
-  padding-top: 30px;
+.resto-card__media-content {
+  font-size: 0.9rem;
 }
-.intro-container .sub-heading {
-  font-size: 20px;
-  font-style: normal;
-  font-family: "Roboto", sans-serif;
+
+.steps span {
+  font-size: 0.9rem;
   font-weight: 300;
 }
-.intro-container .restaurants {
-  border-radius: 25px;
-  width: 228px;
-  height: 50px;
-  border: 0px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
+
+.resto-card__byline {
+  line-height: 1.5;
 }
 
-/********intructions*******/
-.instructions-container {
-  display: flex;
-  background-color: white;
-  width: 395px;
-  height: 450px;
-  margin-left: 5px;
-}
-
-.choose {
-  width: 322.486px;
-  height: 72.379px;
-  border-radius: 20px;
-  border: 0;
-  background-color: #F6F6F6;
-}
-
-.build {
-  width: 322.486px;
-  height: 72.379px;
-  border-radius: 20px;
-  border: 0;
-  background-color: #F6F6F6;
-}
-
-.enjoy {
-  width: 322.486px;
-  height: 72.379px;
-  border-radius: 20px;
-  border: 0;
-  background-color: #F6F6F6;
-}
-
-/*****restaurants*****/
-.restaurant-cards {
-  background-color: #F6F6F6;
-  border-radius: 20px;
-}
-.restaurant-cards .places-cards {
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-.restaurant-cards .places-cards .card {
-  width: 340px;
-  height: 251px;
-}
-.restaurant-cards .places-cards .card img {
-  width: 100%;
-  height: 174px;
-  border-radius: 15px 15px 0px 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.restaurant-cards .places-cards .card img content {
-  padding-left: 50px;
-}
-
-/*******footer******/
-.footer-container {
-  display: flex;
+.loader {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
   background-color: #353535;
-  width: 395px;
-  height: 150px;
-  justify-content: flex-start;
+  opacity: 0.8;
 }
-.footer-container.logo {
-  width: 139px;
-  height: 27px;
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #9356dc;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #9356dc transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  animation: hideme 0s 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideme {
+  to {
+    visibility: hidden;
+  }
+}
+.ResHeartMove {
+  border: none;
+  background-color: inherit;
+  position: relative;
+  font-size: 1.5rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  /******* what i did here was that i added a bottom ampersand nesting for the heart underneath the top one to transition *******/
+  /******* i added the heart ontop of the bottom one for it to transition to a different colour when you hover over the heart icon******/
+}
+.ResHeartMove__bottom {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.ResHeartMove:focus .ResHeartMove__bottom, .ResHeartMove:hover .ResHeartMove__bottom, .ResHeartMove:active .ResHeartMove__bottom {
+  opacity: 0;
+}
+.ResHeartMove:focus .ResHeartMove__top, .ResHeartMove:hover .ResHeartMove__top, .ResHeartMove:active .ResHeartMove__top {
+  opacity: 1;
+}
+.ResHeartMove__top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 2s;
+}
+.ResHeartMove .far {
+  display: block;
+}
+.ResHeartMove .fas {
+  display: block;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  border-radius: 50px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  padding: 16px 24px;
+  color: #fff;
+  filter: drop-shadow(0 5px 3px #dddddd);
+  background-image: linear-gradient(170deg, #ff79da, #9356dc);
+  position: relative;
+  z-index: 1;
+}
+.btn:hover, .btn--active {
+  filter: drop-shadow(0 5px 3px #c3c3c3);
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: linear-gradient(170deg, #fface8, #ae80e5);
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.btn .btn {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  border-radius: 50px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  padding: 16px 24px;
+  color: #fff;
+  filter: drop-shadow(0 5px 3px #dddddd);
+  background-image: linear-gradient(170deg, #ff79da, #9356dc);
+  position: relative;
+  z-index: 1;
+}
+.btn .btn:hover, .btn .btn--active {
+  filter: drop-shadow(0 5px 3px #c3c3c3);
+}
+.btn .btn:hover::after {
+  opacity: 1;
+}
+.btn .btn::after {
+  content: "";
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: linear-gradient(170deg, #fface8, #ae80e5);
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/****** i made this part of the website for the header which has the logo*******/
+header {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+header__logo {
+  height: 50%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header__logo img {
+  width: 88%;
+}
+header__back {
+  padding: 3px 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+footer {
+  background-color: #353535;
+  padding: 1.5em 0 2em 1.5em;
+  line-height: 1.5em;
+}
+footer * {
+  color: #fff;
+  list-style: none;
+}
+footer img {
+  filter: invert(1);
+  width: 120px;
+  padding-bottom: 10px;
+}
+footer i {
+  width: 25px;
+}
+
+.search {
+  text-align: center;
+  background-color: #eaeaea;
+  padding: 10px;
+  box-shadow: inset 0 5px 3px -3px #c4c4c4;
+}
+.search * {
+  font: 600 1rem "Roboto";
+}
+.search input {
+  border: none;
+  padding: 0.5em;
+  background-color: #eaeaea;
+  color: #353535;
+}
+.search input:focus {
+  outline: none;
+}
+.search button {
+  border: none;
+  color: #353535;
+  margin-left: 2.5rem;
+}
+.search input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.search input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.intro {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 2em 0 4em 0;
+}
+.intro__byline {
+  margin: 2.2em 2.1em;
+  font-weight: 300;
+}
+.steps {
+  padding: 3em 4vw 4em 4vw;
+}
+.steps__heading {
+  padding-bottom: 1.2rem;
+}
+.steps__steps {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  gap: 20px;
+  padding-left: 15px;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 850px) {
+  .steps__steps {
+    flex-flow: row;
+    justify-content: space-around;
+    padding-left: 0;
+  }
+}
+.steps__links {
+  max-width: 450px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  filter: drop-shadow(0 5px 3px #dddddd);
+  position: relative;
+  display: block;
+}
+.steps__links:hover, .steps__links--active {
+  filter: drop-shadow(0 5px 3px #c3c3c3);
+}
+.steps__links i {
+  color: #7e7e7e;
+  width: 50px;
+  padding-left: 10px;
+}
+.steps__links span {
+  background-color: #9356dc;
+  color: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: -15px;
+  right: 0;
+  top: 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.footer-container.logo .links {
-  font-size: 16px;
-  color: white;
-  text-align: left;
+.steps__links:hover, .steps__links--active {
+  background-color: #f5edff;
+}
+.steps__links:hover i, .steps__links--active i {
+  color: #9356dc;
+}
+@media screen and (min-width: 850px) {
+  .steps__links {
+    text-align: center;
+  }
+  .steps__links span {
+    left: 45%;
+    right: 0;
+    top: -25%;
+  }
+}
+
+.container {
+  background-color: #f6f6f6;
+  padding: 3em 4vw;
+}
+.container__heading {
+  padding-bottom: 1.2rem;
+}
+
+.resto-grid {
+  display: flex;
+  flex-flow: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .resto-grid {
+    flex-flow: row wrap;
+  }
+}
+
+.resto-card {
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 20px -4px #d0d0d0;
+  border-radius: 15px;
+  position: relative;
+}
+.resto-card:hover {
+  box-shadow: 0 8px 20px -4px #b6b6b6;
+}
+.resto-card:hover .resto-card__media {
+  opacity: 0.9;
+}
+.resto-card__media {
+  width: 100%;
+  position: relative;
+}
+.resto-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/0.52;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.resto-card__media-content {
+  background-color: #99e2d0;
+  color: #028867;
+  border-radius: 3px;
+  padding: 5px 25px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.resto-card__primary {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  padding: 0.8rem;
+}
+.resto-card__actions {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+.resto-card__byline {
+  font-weight: 300;
 }/*# sourceMappingURL=main.css.map */
